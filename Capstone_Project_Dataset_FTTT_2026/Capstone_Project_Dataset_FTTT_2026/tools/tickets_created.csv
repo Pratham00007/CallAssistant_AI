@@ -1,0 +1,49 @@
+ticket_id,created_at,order_id,intent,reason,summary
+TKTd780ee2c23e94659ade803c40e61d139,2026-10-22T19:27:05,89782837,damaged_item,high_value_damage,"Verified caller reports high value damage (> ₹10,000) on order 89782837; Priority Resolution review required under DWM-3."
+TKT47f8a22bddfc469f9b6556cbbbd4e85d,2026-10-22T19:27:05,37113676,human_requested,human_requested,Customer requested to speak with a human support specialist regarding order 37113676.
+TKTf94f2e451c944812a05701e61512f7b0,2026-10-22T19:27:05,66492475,human_requested,human_requested,Customer requested to speak with a human support specialist regarding order 66492475.
+TKTdedb2265f93048b0b13beccbc093e252,2026-10-22T19:27:05,45011817,repeat_contact,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human agent.
+TKTbebbbfb329654c51bba86473f50e34dd,2026-10-22T19:27:05,48196636,repeat_contact,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human agent.
+TKT1535b0ef643b48ed966a079469c28623,2026-10-22T19:27:52,89782837,damaged_item,high_value_damage,"Verified caller reports high value damage (> ₹10,000) on order 89782837; Priority Resolution review required under DWM-3."
+TKTb5b1ccd27df64e30b4c62572daf7209f,2026-10-22T19:27:52,37113676,human_requested,human_requested,Customer requested to speak with a human support specialist regarding order 37113676.
+TKTf04c0b08964e4b3bb4241123af25a39b,2026-10-22T19:27:52,66492475,human_requested,human_requested,Customer requested to speak with a human support specialist regarding order 66492475.
+TKT463381e4cce148da9fa708d3844a8acd,2026-10-22T19:27:52,45011817,repeat_contact,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human agent.
+TKT967f76b190074c42a063d3ad32c01170,2026-10-22T19:27:52,48196636,repeat_contact,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human agent.
+TKT37448df22f6f49ef95d64859420e6b7c,2026-10-22T19:30:03,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKT85224daf4c1d4fb39e3cb441480ac3a2,2026-10-22T19:30:03,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKT152c152efe2d4b1cabfbba561ada45d0,2026-10-22T19:30:03,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKT05e7fc8226d14bab8d177f4d8e057714,2026-10-22T19:30:03,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKT02486d70de0749e6ba1ed78114d9b4fa,2026-10-22T19:30:03,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKT77ad7191f27f4fc0bcbd5f5b38c4a0b0,2026-10-22T19:30:03,67830826,refund_status,delayed_refund,Refund delayed > 3 business days for order 67830826; RRN 315633825001; escalated to banking escalation team.
+TKTeffbc8cdd98543b0af4872642d0b2016,2026-10-22T19:30:03,16640894,refund_status,delayed_refund,Refund delayed > 3 business days for order 16640894; RRN 315633825001; escalated to banking escalation team.
+TKTe80fa0b910a84d8bb4a95fa801da75d8,2026-10-22T19:30:38,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKTca5d515e4b8b4ec39d8e263d1b997e62,2026-10-22T19:30:38,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKTd67565f3a8c34818bb495034ea4cd5ff,2026-10-22T19:30:38,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKTbfa12858f836441190f9656f44c5e65c,2026-10-22T19:30:38,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKTfec348c480ae4c3d9931ee94df4e1584,2026-10-22T19:30:38,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKT51bbddb39bf54a6d880f0c21842d9d6b,2026-10-22T19:30:38,67830826,refund_status,delayed_refund,Refund delayed > 3 business days for order 67830826; RRN 315633825001; escalated to banking escalation team.
+TKT69d764e827984cbea79b23d0d00f6164,2026-10-22T19:30:38,16640894,refund_status,delayed_refund,Refund delayed > 3 business days for order 16640894; RRN 315633825001; escalated to banking escalation team.
+TKTf1cdc868f6b744d4bd78121fda30f068,2026-10-22T19:32:15,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKT3caa6a8058234f9a990789b3ae8ca5c1,2026-10-22T19:32:15,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKT071619cf101a43cba82e4e160cbdac95,2026-10-22T19:32:15,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKT45e17081261445ceafd2a6a539c7580f,2026-10-22T19:32:15,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKT48eb73452fe24cd7bf91528664700d08,2026-10-22T19:32:15,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKTd81d58edd06944858ec304503ddb3d91,2026-10-22T19:32:15,16640894,refund_status,delayed_refund,Refund delayed > 3 business days past maximum timeline for order 16640894; RRN 315633825001; escalated to banking escalation team.
+TKT7cefa48f92b44e33afd552cacdd33f94,2026-10-22T19:32:48,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKT82c33bb84cbb459dabd30b0e227fde6b,2026-10-22T19:32:48,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKTecfd3d66d3c149acb8163ad21c76cc31,2026-10-22T19:32:48,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKTdac89c1cdf324f53a718efc9c6fe9752,2026-10-22T19:32:48,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKT6765afb4a1434cb39cab9ef6c9b9f2c8,2026-10-22T19:32:48,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKT60267c405c7649bfadfdd62b9a0f630b,2026-10-22T19:32:48,16640894,refund_status,delayed_refund,Refund delayed > 3 business days past maximum timeline for order 16640894; RRN 315633825001; escalated to banking escalation team.
+TKT8a2a35f4299b4ecba2f176dc7963eda3,2026-10-22T19:37:57,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKTdb7472d122374c019ffbde4d727e9e9f,2026-10-22T19:37:57,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKT02279dc41d674c919f79a2390508f43f,2026-10-22T19:37:57,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKT2fa77fbcf37a4432b00b46de663f2e7b,2026-10-22T19:37:57,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKTe17d2dd89f154a7b87cfab3c5cc85603,2026-10-22T19:37:57,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKT24b366860b824c3c88c4aad988fe0385,2026-10-22T19:37:57,16640894,refund_status,delayed_refund,Refund delayed > 3 business days past maximum timeline for order 16640894; RRN 315633825001; escalated to banking escalation team.
+TKT76badb356c97469fa2508d93bee757de,2026-10-22T19:39:36,89782837,damaged_item,high_value_damage,"Verified caller reports damage on order 89782837; claims > ₹10,000 require Priority Resolution review under policy DWM-3."
+TKT3c25719406f945dbaafabe2405232a3e,2026-10-22T19:39:36,37113676,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 37113676.
+TKT26b3389410fc46b79b6feab1fc041b27,2026-10-22T19:39:36,66492475,escalation,human_requested,Verified customer requested to speak with a human support colleague regarding order 66492475.
+TKTa8b1463cdc104b89947ea63b5106825e,2026-10-22T19:39:36,45011817,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 45011817; escalating to senior human team.
+TKT8bff4b10a75e446b94d7f7d66bbcecd3,2026-10-22T19:39:36,48196636,escalation,repeat_contact,Customer has contacted support >= 2 times in last 7 days regarding order 48196636; escalating to senior human team.
+TKT1d913cd5872a45d086df58100cfc1c1b,2026-10-22T19:39:36,16640894,refund_status,delayed_refund,Refund delayed > 3 business days past maximum timeline for order 16640894; RRN 315633825001; escalated to banking escalation team.

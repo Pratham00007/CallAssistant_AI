@@ -1,0 +1,6 @@
+INPUT_FILE: clip_04_refund_query.wav
+TRANSCRIPT: Aur refund kitne din mein aayega?
+REPLY: Refund aapke UPI account mein 1 se 3 business days ke andar aa jayega.
+DECISION: answer
+TOOL_CALLS: 
+RETRIEVED_CHUNKS: REF-2, RET-7

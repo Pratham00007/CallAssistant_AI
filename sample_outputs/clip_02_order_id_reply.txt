@@ -1,0 +1,6 @@
+INPUT_FILE: clip_02_order_id.wav
+TRANSCRIPT: Order number hai 8978 2837.
+REPLY: Before I can share details, please provide the last 4 digits of your registered phone number or your delivery pincode.
+DECISION: clarify
+TOOL_CALLS: lookup_order(order_id=89782837)
+RETRIEVED_CHUNKS: IDV-2

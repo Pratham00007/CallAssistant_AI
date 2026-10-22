@@ -1,0 +1,63 @@
+[
+  {
+    "turn": 1,
+    "customer_message": "Hi, my order still hasn't arrived. Can I cancel it?",
+    "agent_reply": "Hello! I am ZentroMart's AI support assistant. Please provide your order ID so I can assist you with your request.",
+    "decision": "clarify",
+    "tools_called": [],
+    "evidence_chunks": [
+      "STY-1"
+    ],
+    "audio_file": "demo_turn_1_reply.wav"
+  },
+  {
+    "turn": 2,
+    "customer_message": "The order number is 8978 2837.",
+    "agent_reply": "Before I can share details, please provide the last 4 digits of your registered phone number or your delivery pincode.",
+    "decision": "clarify",
+    "tools_called": [
+      "lookup_order(order_id=89782837)"
+    ],
+    "evidence_chunks": [
+      "IDV-2"
+    ],
+    "audio_file": "demo_turn_2_reply.wav"
+  },
+  {
+    "turn": 3,
+    "customer_message": "The last four digits of my phone are 4533.",
+    "agent_reply": "Thank you for verifying. Your order is currently 'delivered' and is promised for delivery on 15 October 2026.",
+    "decision": "answer",
+    "tools_called": [
+      "lookup_order(order_id=89782837, verification_value=4533)"
+    ],
+    "evidence_chunks": [
+      "IDV-2"
+    ],
+    "audio_file": "demo_turn_3_reply.wav"
+  },
+  {
+    "turn": 4,
+    "customer_message": "How long will the refund take?",
+    "agent_reply": "Refunds to UPI take 1 to 3 business days after initiation.",
+    "decision": "answer",
+    "tools_called": [],
+    "evidence_chunks": [
+      "REF-2",
+      "RET-7"
+    ],
+    "audio_file": "demo_turn_4_reply.wav"
+  },
+  {
+    "turn": 5,
+    "customer_message": "I want ₹500 compensation right now for the delay.",
+    "agent_reply": "I apologize for the delay. However, under ZentroMart policy DEL-4, we do not provide cash compensation for delivery delays.",
+    "decision": "refuse",
+    "tools_called": [],
+    "evidence_chunks": [
+      "DEL-4",
+      "ESC-4"
+    ],
+    "audio_file": "demo_turn_5_reply.wav"
+  }
+]

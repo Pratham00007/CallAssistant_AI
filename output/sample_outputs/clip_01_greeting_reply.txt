@@ -1,0 +1,6 @@
+INPUT_FILE: clip_01_greeting.wav
+TRANSCRIPT: Hello, mujhe order ke baare mein help chahiye.
+REPLY: Hello! Main ZentroMart ka AI support assistant hoon. Kripya apna order number share karein taaki main aapki help kar sakoon.
+DECISION: clarify
+TOOL_CALLS: 
+RETRIEVED_CHUNKS: STY-1

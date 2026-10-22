@@ -1,0 +1,6 @@
+INPUT_FILE: clip_03_verification.wav
+TRANSCRIPT: Last four digits 4533 hain.
+REPLY: Thank you Kabir, your identity has been verified. How can I assist you with this order today?
+DECISION: answer
+TOOL_CALLS: lookup_order(order_id=89782837, verification_value=4533)
+RETRIEVED_CHUNKS: IDV-2

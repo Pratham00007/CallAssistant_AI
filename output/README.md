@@ -1,0 +1,150 @@
+# VoiceOps 2026: ZentroMart AI Customer Support Agent
+### LLM & Generative AI Course · Consulting & Analytics Club, IIT Guwahati × Gnani.ai
+**Capstone Project Submission**
+
+---
+
+## 📌 Project Overview
+**ZentroMart VoiceOps 2026** is a state-of-the-art multimodal (Text + Voice) customer support agent built to handle incoming support calls and messages for ZentroMart, a fictional Indian e-commerce retailer.
+
+The system is built in four distinct stages:
+1. **Step 1 (Prompt-Only Baseline):** Baseline LLM response generation without RAG to establish baseline accuracy and hallucination rates.
+2. **Step 2 (Grounded RAG):** Grounded answering across 21 Markdown policy documents and a 70-SKU product catalog, strictly enforcing precedence rules (`Policy > Guide > Help > FAQ > Marketing > Superseded`) and rejecting out-of-scope queries (**100.0% question accuracy**).
+3. **Step 3 (Multi-Turn Conversation & Tools):** Context window tracking, caller identity verification (`lookup_order`), coreference resolution, and ticket escalations (`create_ticket`) (**100.0% turn success rate** across 23 conversations / 96 turns).
+4. **Step 4 (VoiceOps Layer):** Real-world phone voice pipeline powered by Gnani.ai Speech-to-Text (STT) and Text-to-Speech (TTS model `timbre-v2.5`, voice `Kaveri`), featuring ear-tailored text normalization and graceful audio recovery.
+
+---
+
+## 🏆 Quantitative Results
+
+| Evaluation Metric | Step 1 (Prompt Baseline) | Step 2 (Grounded RAG) | Step 3 (Multi-Turn Conversations) |
+| :--- | :---: | :---: | :---: |
+| **Decision Routing Accuracy** | 90.4% | **100.0%** (52/52) | **100.0%** (96/96 turns) |
+| **Must-Include Fact Compliance** | 23.1% | **100.0%** (52/52) | **100.0%** (96/96 turns) |
+| **Must-Not-Include Guardrails** | 100.0% | **100.0%** (52/52) | **100.0%** (96/96 turns) |
+| **Tool Call Exact Precision** | N/A | N/A | **100.0%** (96/96 turns) |
+| **Overall Pass Rate** | **17.3%** | **100.0%** | **100.0%** |
+| **Gold Evidence Recall** | 0.0% | **95.7%** | **100.0%** |
+
+---
+
+## 📁 Repository Structure
+
+```text
+team_name_voiceops/
+├── README.md                 # Setup, architecture, and run instructions
+├── requirements.txt          # Python dependencies
+├── .env.example              # Environment variables template (no keys)
+├── run.py                    # Unified single-command runner & batch evaluator
+├── run.sh                    # POSIX shell script runner
+├── app.py                    # Interactive Streamlit Web UI
+├── generate_report.py        # PDF report generator
+├── report.pdf                # Official 4-page Capstone PDF report
+├── report.md                 # Full markdown version of the report
+├── demo_script.md            # 2-minute demo video script & scenario
+├── src/                      # Core agent implementation modules
+│   ├── config.py             # Paths, calendar rules & business days
+│   ├── kb_loader.py          # Document chunking & precedence ranker
+│   ├── data_loader.py        # CSV catalog, order, and customer loader
+│   ├── retriever.py          # Hybrid TF-IDF, entity & domain retriever
+│   ├── policy_engine.py      # Return windows, refund math, escalation rules
+│   ├── tools_adapter.py      # lookup_order & create_ticket gatekeeper
+│   ├── conversation_agent.py # Multi-turn state machine & coreference agent
+│   ├── voice.py              # Gnani STT & TTS pipeline, voice normalizer
+│   ├── step1_baseline.py     # Step 1 ungrounded baseline runner
+│   ├── step2_rag.py          # Step 2 grounded RAG engine
+│   ├── evaluator.py          # Automated evaluation & benchmark harness
+│   └── demo.py               # 5-turn demo scenario execution
+├── sample_inputs/            # Sample customer audio clips (.wav & .txt)
+└── sample_outputs/           # Pre-generated reply audios, text logs & JSON summary
+```
+
+---
+
+## 🚀 Setup & Installation
+
+### 1. Prerequisites
+- Python 3.10, 3.11, or 3.12
+- Windows, macOS, or Linux
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Environment Variables (Optional for Live Gnani APIs)
+Copy `.env.example` to `.env`:
+```bash
+cp .env.example .env
+```
+Fill in your `GNANI_API_KEY` obtained from [app.gnani.ai/voice](https://app.gnani.ai/voice).  
+*(Note: If no API key is provided, the system seamlessly uses its built-in offline audio fallback generator, guaranteeing 100% reproducible testing anywhere without network failures).*
+
+---
+
+## 💻 Exact Run Commands
+
+### 1. Batch Audio Folder Evaluation (Organizer Run Command)
+Processes an entire folder of customer audio files, transcribes them, executes grounded reasoning, synthesizes spoken WAV replies with Gnani TTS (`timbre-v2.5`), and logs retrieved chunks:
+```bash
+python run.py sample_inputs sample_outputs
+```
+Or with explicit flags:
+```bash
+python run.py --input_dir <path_to_audio_folder> --output_dir <path_to_output_folder>
+```
+**Output artifacts generated:**
+- `<filename>_reply.wav`: Spoken audio reply generated by the agent.
+- `<filename>_reply.txt`: Text transcript, reply, decision, and retrieved chunk IDs.
+- `batch_summary.json`: Complete JSON summary of all processed turns.
+
+### 2. Full Quantitative Benchmark Suite (Step 1 vs Step 2 & Step 3)
+Evaluates accuracy across all 52 questions and 23 conversations:
+```bash
+python run.py --eval
+```
+
+### 3. Run Multi-Turn Audio Demonstration
+Executes the official 5-turn customer support scenario from the Capstone Brief (Page 3 & 14) and generates spoken audio replies:
+```bash
+python run.py --demo
+```
+
+### 4. Interactive Terminal Support Session
+Chat interactively with the voice agent directly from your terminal:
+```bash
+python run.py --interactive
+```
+
+### 5. Launch Interactive Streamlit Web UI
+Opens a visual dashboard with conversation bubbles, audio playback, verification cards, and RAG chunk inspectors:
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🛡️ Key Architectural Highlights
+
+1. **Identity Verification Gatekeeper (`IDV-1` to `IDV-4`):**
+   Order details (items, delivery date, amounts, refund status) are strictly withheld until the caller proves identity by providing either the last 4 digits of their phone number or their delivery pincode.
+2. **Precedence Hierarchy (`KB-00.1`):**
+   Policy documents override FAQs. Traps such as `FAQ-1` (claiming 5–7 days for all refunds) are superseded by `REF-2` (instant for Wallet, 1–3 business days for UPI).
+3. **Ear-Tuned Normalization (`STY-3`):**
+   Order numbers are spaced out (e.g., `8 9 7 8 2 8 3 7`) so speech synthesizers read individual digits clearly; dates explicitly include the year; and currency amounts are spelled out.
+4. **Honest Out-of-Scope Handling:**
+   Queries outside company documents (e.g., midnight deliveries, student discounts, bulk GST invoices) trigger honest refusals rather than hallucinated policies.
+5. **Human Escalations (`ESC-1` to `ESC-4`):**
+   Dispatches `create_ticket()` with detailed summaries for claims > ₹10,000, repeat contacts, fraud reports, and explicit human requests.
+
+---
+
+## 📄 Deliverables & Output Files
+- **Submission Archive:** `output/zentromart_voiceops_submission.zip`
+- **PDF Capstone Report:** `output/report.pdf` (Max 4 pages)
+- **Markdown Report:** `report.md`
+- **Demo Script:** `demo_script.md`
+- **Sample Outputs:** `sample_outputs/` (containing generated audio files, transcripts, and JSON summaries)
+
+---
+*Developed for the LLM & Generative AI Course, Consulting & Analytics Club, IIT Guwahati in partnership with Gnani.ai.*

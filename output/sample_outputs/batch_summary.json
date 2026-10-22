@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "input_file": "clip_01_greeting.wav",
+    "transcript": "Hello, mujhe order ke baare mein help chahiye.",
+    "reply": "Hello! Main ZentroMart ka AI support assistant hoon. Kripya apna order number share karein taaki main aapki help kar sakoon.",
+    "decision": "clarify",
+    "tool_calls": [],
+    "retrieved_chunks": [
+      "STY-1"
+    ],
+    "audio_output": "clip_01_greeting_reply.wav"
+  },
+  {
+    "index": 2,
+    "input_file": "clip_02_order_id.wav",
+    "transcript": "Order number hai 8978 2837.",
+    "reply": "Before I can share details, please provide the last 4 digits of your registered phone number or your delivery pincode.",
+    "decision": "clarify",
+    "tool_calls": [
+      "lookup_order(order_id=89782837)"
+    ],
+    "retrieved_chunks": [
+      "IDV-2"
+    ],
+    "audio_output": "clip_02_order_id_reply.wav"
+  },
+  {
+    "index": 3,
+    "input_file": "clip_03_verification.wav",
+    "transcript": "Last four digits 4533 hain.",
+    "reply": "Thank you Kabir, your identity has been verified. How can I assist you with this order today?",
+    "decision": "answer",
+    "tool_calls": [
+      "lookup_order(order_id=89782837, verification_value=4533)"
+    ],
+    "retrieved_chunks": [
+      "IDV-2"
+    ],
+    "audio_output": "clip_03_verification_reply.wav"
+  },
+  {
+    "index": 4,
+    "input_file": "clip_04_refund_query.wav",
+    "transcript": "Aur refund kitne din mein aayega?",
+    "reply": "Refund aapke UPI account mein 1 se 3 business days ke andar aa jayega.",
+    "decision": "answer",
+    "tool_calls": [],
+    "retrieved_chunks": [
+      "REF-2",
+      "RET-7"
+    ],
+    "audio_output": "clip_04_refund_query_reply.wav"
+  },
+  {
+    "index": 5,
+    "input_file": "clip_05_unsupported.wav",
+    "transcript": "Can I schedule a delivery at midnight?",
+    "reply": "Sorry, I don't have information about that. I can connect you to a colleague who can help.",
+    "decision": "answer",
+    "tool_calls": [],
+    "retrieved_chunks": [],
+    "audio_output": "clip_05_unsupported_reply.wav"
+  }
+]
